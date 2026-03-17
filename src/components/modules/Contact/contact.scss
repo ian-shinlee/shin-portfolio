@@ -37,6 +37,10 @@
         margin-top: calc(var(--gap-base) / 2);
         font-size: var(--contact-link-fz, 4vw);
         font-weight: 700;
+        &:hover {
+            color: var(--color-primary);
+            transition: color 0.2s ease-out;
+        }
     }
     @media only screen and (max-width: 767px) {
         --contact-title-fw: 400;

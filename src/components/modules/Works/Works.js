@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Work from '../../atoms/work/work';
 import './works.scss';
 
@@ -7,17 +8,21 @@ function Works({works}) {
         <div className="sec-container works-container" id="works">
             <h2 className="sec-title works-title">Work Experience</h2>
             <ul className="works-list">
-                {works.map((work) => (
-                    <Work
+                {works.map((work, i) => (
+                    <motion.li
+                        className="work"
                         key={work.id}
-                        title={work.title}
-                        desc={work.desc}
-                        link={work.link}
-                        image={work.image}
-                        order={work.order}
-                        noImage={work?.noImage}
-                        period={work.period}    
-                    />
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.1 }}
+                        transition={{
+                            duration: 0.4,
+                            ease: 'easeOut',
+                            delay: i * 0.05
+                        }}
+                    >
+                        <Work {...work} />
+                    </motion.li>
                 ))}
             </ul>
         </div>

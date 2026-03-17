@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import './main.scss';
 import Star from "../../atoms/icon/Star";
 import helloVideo from "../../../assets/images/hello.mp4";
@@ -13,13 +14,50 @@ import { ReactComponent as IconNPM } from "../../../assets/images/icons/icon_npm
 import { ReactComponent as IconGit } from "../../../assets/images/icons/icon_git.svg";
 
 function Main() {
+    const motionContainer = {
+        hidden: {},
+        show: {
+            transition: {
+                staggerChildren: 0.2,
+            }
+        }
+    }
+    const motionItem = {
+        hidden: { opacity: 0, y: 20 },
+        show: { 
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.4,
+                ease: 'easeOut',
+            }
+        }
+    }
+    const motionVideoItem = {
+        hidden: { opacity: 0, scale: 0.85 },
+        show: { 
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.4,
+                ease: 'easeOut',
+            }
+        }
+    }
+
     return (
-        <div className="main-container">
+        <motion.div className="main-container"
+            variants={motionContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false }}
+        >
             <h1 className="sr-only">안녕하세요, 퍼블리셔 이신입니다.</h1>
-            <div className="main-title" aria-hidden="true">
-                Hello.
-            </div>
-            <video 
+            <motion.div variants={motionItem} className="main-title" aria-hidden="true">
+                Hello
+            </motion.div>
+            <motion.video 
+                variants={motionVideoItem}
                 autoPlay
                 loop
                 muted
@@ -29,14 +67,14 @@ function Main() {
                 aria-hidden="true"
             >
                 <source src={helloVideo} type="video/mp4" />
-            </video>
-            <div className="main-title" aria-hidden="true">
+            </motion.video>
+            <motion.div variants={motionItem} className="main-title" aria-hidden="true">
                 I am Lee-Shin,
                 <i className="icon circle" />
                 <Star className="rotate" />
                 <i className="icon circle" />
-                a Web Publisher.
-            </div>
+                a Web Publisher
+            </motion.div>
             <div className="main-desc">
                 <p>
                     함께 만드는 과정에서 더 나은 결과가 나온다고 믿는 퍼블리셔 이신입니다.<br/>
@@ -88,7 +126,7 @@ function Main() {
                     </ul>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

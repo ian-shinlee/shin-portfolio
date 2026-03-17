@@ -1,40 +1,67 @@
-# 이신의 포트폴리오 웹사이트
+# 👋 이신 | Web Publisher Portfolio
 
-node: 16.15.0 버전으로 작업되었습니다.
+퍼블리셔 이신의 포트폴리오 웹사이트입니다.
+협업과 소통을 바탕으로, 사용자 경험을 고려한 마크업과 UI 구현을 지향합니다.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔗 Live Demo
 
-### `npm start`
+👉 https://shin2.dothome.co.kr/
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* HTML5 / CSS3
+* SASS / Tailwind CSS / Bootstrap
+* JavaScript (ES6+) / jQuery
+* React
+* Git / GitHub / NPM
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚙️ Getting Started
 
-### `npm run build`
+### 1. 설치
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. 개발 서버 실행
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm start
+```
 
-### `npm run eject`
+👉 http://localhost:3000 에서 확인 가능
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📦 Build
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+프로덕션용으로 최적화된 파일이 생성됩니다.
+
+---
+
+## 🧑‍💻 About Me
+
+* 협업과 커뮤니케이션을 중요하게 생각합니다.
+* 팀에 자연스럽게 녹아드는 개발을 지향합니다.
+* 꾸준히 더 나은 UI/UX를 고민합니다.
+
+---
+
+## 📬 Contact
+
+* Email: ian.shinlee@gmail.com
+
+---
+
+## 📌 Notes
+
+* Node.js 16.15.0 환경에서 개발되었습니다.
