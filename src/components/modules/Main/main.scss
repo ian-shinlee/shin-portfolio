@@ -1,0 +1,121 @@
+.main-container {
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    video {
+        display: inline-block;
+        align-self: flex-end;
+        width: var(--box-width);
+        margin-top: -5vw;
+        pointer-events: none;
+    }
+    @media only screen and (max-width: 767px) {
+        margin-top: var(--gap-large);
+    }
+}
+.main-title {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 8.7vw;
+    font-weight: 700;
+    .icon {
+        --circle-size: 4vw;
+        width: var(--circle-size);
+        height: var(--circle-size);
+        background-color: #fff;
+        border-radius: 50%;
+        transform: translateY(-0.8vw);
+    }
+    .icon,
+    .star {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        svg {
+            width: 8vw;
+        }
+    }
+    .star {
+        margin-top: -2vw;
+    }
+    .rotate {
+        svg {
+            animation: icon-rotate 2s ease-in-out infinite;
+        }
+    }
+    ~ .main-title {
+        margin-top: -7vw;
+    }
+}
+
+@keyframes icon-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    50.0001% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.main-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 4vw 0 2vw;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    p {
+        width: var(--box-width);
+    }
+    @media only screen and (min-width: 768px) {
+        padding-top: 2vw;
+        font-size: 1.6vw;
+        line-height: 1.8;
+        align-self: flex-end;
+    }
+}
+.main-skills {
+    h2 {
+        margin: calc(var(--gap-base) * 1.5) 0 -10px;
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        @media only screen and (max-width: 767px) {
+            padding-top: 10px;
+        }
+        li {
+            --skill-gap: 20px;
+            --lang-size: 36px;
+            margin-right: var(--skill-gap);
+            margin-top: var(--skill-gap);
+            @media only screen and (max-width: 767px) {
+                --skill-gap: 8px;  
+                --lang-size: 24px;
+            }
+        }
+    }
+    svg {
+        display: inline-block;
+        width: var(--lang-size);
+        height: var(--lang-size);
+    }
+}

@@ -1,0 +1,84 @@
+/* Regular */
+@font-face {
+  font-family: 'LineSeed KR';
+  src: url('./assets/fonts/LINESeedKR-Rg.woff2') format('woff2'),
+       url('./assets/fonts/LINESeedKR-Rg.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'LineSeed KR';
+  src: url('./assets/fonts/LINESeedKR-Bd.woff2') format('woff2'),
+       url('./assets/fonts/LINESeedKR-Bd.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+/* Thin */
+@font-face {
+  font-family: 'LineSeed KR';
+  src: url('./assets/fonts/LINESeedKR-Th.woff2') format('woff2'),
+       url('./assets/fonts/LINESeedKR-Th.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --gap-base: 40px;
+  --gap-large: 120px;
+  --color-base: #333;
+  --color-primary: #00cdff;
+  --box-width: 57vw;
+  @media only screen and (max-width: 767px) {
+    --gap-base: 20px;
+    --gap-large: 50px;
+    --box-width: 76vw;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0 var(--gap-base) var(--gap-base);
+  color: var(--color-base);
+  font-family: 'LineSeed KR', serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+.only-pc {
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.sec-title {
+  font-size: 3vw;
+  @media only screen and (max-width: 767px) {
+    font-size: 22px;
+  }
+}
+.sec-container {
+  margin-top: var(--gap-large);
+  scroll-margin: calc(25px + (var(--gap-base) * 2));
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}

@@ -1,0 +1,28 @@
+.header {
+    position: sticky;
+    top: 0;
+    margin-bottom: var(--gap-base);
+    border-bottom: 2px solid #000;
+    background-color: rgba(#fff, 0.5);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: var(--gap-base) calc(var(--gap-base) / 4) 0;
+    a {
+        font-size: 16px;
+    }
+}
+.btn-home {
+    font-weight: 700;
+    margin-right: auto;
+}
+.btn-quick {
+    margin-left: var(--gap-base);
+    svg {
+        display: inline-block;
+        vertical-align: top;
+        --git-icon-size: 18px;
+        width: var(--git-icon-size);
+        height: var(--git-icon-size);
+    }
+}
