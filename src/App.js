@@ -6,6 +6,7 @@ import Header from "./components/modules/Header/Header";
 import Main from "./components/modules/Main/Main";
 import Works from "./components/modules/Works/Works";
 import Contact from "./components/modules/Contact/Contact";
+import Footer from "./components/modules/Footer/Footer";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
       <Main />
       <Works works={works} />
       <Contact />
+      <Footer />
     </div>
   );
 }

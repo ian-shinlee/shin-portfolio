@@ -25,10 +25,10 @@
 }
 
 :root {
-  --gap-base: 40px;
-  --gap-large: 120px;
   --color-base: #333;
   --color-primary: #00cdff;
+  --gap-base: 40px;
+  --gap-large: 120px;
   --box-width: 57vw;
   @media only screen and (max-width: 767px) {
     --gap-base: 20px;
@@ -47,6 +47,7 @@ body {
   font-weight: 400;
   font-style: normal;
   line-height: 1.4;
+  word-break: keep-all;
 }
 h1, h2, h3, p {
   margin: 0;

@@ -10,7 +10,7 @@ function Header() {
             </a>
             <a href="#works" className="btn-quick">Works</a>
             <a href="#contact" className="btn-quick">Contact</a>
-            <a href="https://blog.example.com" target="_blank" rel="noopener noreferrer" className="btn-quick btn-git">
+            <a href="https://github.com/ian-shinlee/shin-portfolio" target="_blank" rel="noopener noreferrer" className="btn-quick btn-git">
                 <span className="sr-only">깃허브로 이동</span>
                 <IconGithub />
             </a>

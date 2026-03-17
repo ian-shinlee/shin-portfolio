@@ -19,7 +19,7 @@ function Contact() {
     );
 
     return (
-        <footer className="sec-container contact-container" id="contact">
+        <div className="sec-container contact-container" id="contact">
             <Swiper
                 grabCursor={true}
                 effect={'creative'}
@@ -44,10 +44,7 @@ function Contact() {
                     title: "<span class=\"highlight\">지금 연락주시기 바랍니다!!!</span>",
                 })}
             </Swiper>
-            <div className='copy-right'>
-                @ 2026 SHIN. All rights reserved.
-            </div>
-        </footer>
+        </div>
     );
 }
 
