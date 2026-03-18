@@ -18,7 +18,6 @@ function Works({works}) {
                         transition={{
                             duration: 0.4,
                             ease: 'easeOut',
-                            delay: i * 0.05
                         }}
                     >
                         <Work {...work} />

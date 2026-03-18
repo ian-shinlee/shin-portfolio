@@ -2,6 +2,7 @@ import './App.scss';
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import { db } from "./firebase";
+import Skip from "./components/modules/Skip/Skip";
 import Header from "./components/modules/Header/Header";
 import Main from "./components/modules/Main/Main";
 import Works from "./components/modules/Works/Works";
@@ -30,10 +31,13 @@ function App() {
 
   return (
     <div className="App">
+      <Skip />
       <Header />
-      <Main />
-      <Works works={works} />
-      <Contact />
+      <main id="content">
+        <Main />
+        <Works works={works} />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
